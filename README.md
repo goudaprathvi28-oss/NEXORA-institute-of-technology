@@ -151,3 +151,5 @@ correction/audit behavior, CSV export, and the existing AI proxy.
 
 The homepage's existing Unsplash images remain illustrative placeholders;
 replace them with institution-approved, licensed assets before production.
+# NEXORA-institute-of-technology
+college portal
