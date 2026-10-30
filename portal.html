@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5d1725" />
+    <meta name="description" content="NEXORA Institute of Technology secure college portal." />
+    <title>{{PAGE_TITLE}} | NEXORA Institute of Technology</title>
+    <link rel="stylesheet" href="/portal.css" />
+    <script defer src="/portal.js"></script>
+  </head>
+  <body data-page="{{PAGE_PATH}}" data-demo="{{DEMO_MODE}}">
+    <div class="demo-banner" id="demo-banner" hidden>
+      DEMO ENVIRONMENT — all records are synthetic. Do not enter real student or faculty data.
+    </div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="NEXORA home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-name"><strong>NEXORA</strong><small>Institute of Technology</small></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span aria-hidden="true">☰</span><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Portal navigation">
+        <a href="/admissions">Admissions</a>
+        <a href="/academics">Academics</a>
+        <a href="/events">Events</a>
+        <a href="/notices">Notices</a>
+        <a href="/placements">Placements</a>
+        <a href="/faculty-directory">Faculty</a>
+        <a href="/student-dashboard" data-role-link="Student">Student dashboard</a>
+        <a href="/faculty-dashboard" data-role-link="Faculty">Faculty dashboard</a>
+        <a href="/attendance" data-auth-link>Attendance</a>
+        <a href="/study-materials" data-auth-link>Study materials</a>
+        <a href="/assistant" data-auth-link>College assistant</a>
+        <a href="/admin" data-role-link="Administrator">Administration</a>
+        <a href="/login" id="sign-in-link">Sign in</a>
+        <button id="sign-out-button" type="button" hidden>Sign out</button>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <div class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span><span id="breadcrumb-current">Loading</span>
+      </div>
+      <section class="page-heading" aria-labelledby="page-title">
+        <p class="eyebrow">NEXORA INSTITUTE OF TECHNOLOGY</p>
+        <h1 id="page-title">{{PAGE_TITLE}}</h1>
+        <p id="page-description">A secure, role-based portal for the NEXORA community.</p>
+      </section>
+      <div id="portal-status" class="status-message" role="status" aria-live="polite" hidden></div>
+      <section id="portal-page" aria-label="{{PAGE_TITLE}}" aria-live="polite">
+        <div class="loading-state"><span class="spinner" aria-hidden="true"></span>Loading page…</div>
+      </section>
+      <a class="back-home" href="/">← Back to NEXORA home</a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-name" href="/">NEXORA <span>Institute of Technology</span></a>
+        <p>Secure college services. Official NEXORA records and policies must be provided by the institution.</p>
+        <nav aria-label="Footer navigation">
+          <a href="/admissions">Admissions</a><a href="/academics">Academics</a>
+          <a href="/notices">Notices</a><a href="/assistant">College Assistant</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      window.NEXORA_PORTAL = { page: "{{PAGE_PATH}}", demoMode: {{DEMO_MODE}} };
+    </script>
+  </body>
+</html>

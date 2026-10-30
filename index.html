@@ -1,0 +1,3896 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore the academic experience, student resources, and possibilities at NEXORA Institute of Technology."
+    />
+    <meta name="theme-color" content="#5d1725" />
+    <title>NEXORA Institute of Technology — Build what’s next</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #20213a;
+        --muted: #73758c;
+        --green: #5c55d9;
+        --green-dark: #25234c;
+        --lime: #d6f878;
+        --cream: #f6f6fb;
+        --line: #e6e6f0;
+        --white: #fff;
+        font-family: "Aptos", "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--cream);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1160px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        color: #e4eee8;
+        background: var(--green-dark);
+        font-size: 12px;
+      }
+
+      .topbar-inner {
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .topbar-links {
+        display: flex;
+        gap: 22px;
+      }
+
+      .topbar a:hover,
+      .topbar a:focus-visible {
+        color: var(--lime);
+      }
+
+      .header {
+        position: relative;
+        z-index: 2;
+        background: rgba(247, 248, 242, 0.96);
+        border-bottom: 1px solid rgba(19, 45, 42, 0.08);
+      }
+
+      .nav {
+        min-height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        background: var(--green);
+        border-radius: 14px 14px 14px 4px;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+      .brand-copy strong,
+      .brand-copy span {
+        display: block;
+      }
+
+      .brand-copy strong {
+        font-size: 15px;
+        letter-spacing: -0.3px;
+      }
+
+      .brand-copy span {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 10px;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: #42534e;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .nav-links a:not(.button):hover,
+      .nav-links a:not(.button):focus-visible {
+        color: var(--green);
+      }
+
+      .button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+        color: var(--white);
+        background: var(--green);
+        border: 1px solid var(--green);
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .button:hover {
+        background: var(--green-dark);
+        transform: translateY(-1px);
+      }
+
+      .button-light {
+        color: var(--ink);
+        background: var(--white);
+        border-color: var(--white);
+      }
+
+      .button-light:hover {
+        color: var(--white);
+        border-color: var(--green-dark);
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        color: var(--ink);
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 590px;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        background:
+          linear-gradient(90deg, rgba(7, 37, 32, 0.94) 0%, rgba(7, 37, 32, 0.78) 44%, rgba(7, 37, 32, 0.22) 100%),
+          linear-gradient(0deg, rgba(7, 37, 32, 0.28), rgba(7, 37, 32, 0.05)),
+          url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=85") center 48% / cover;
+      }
+
+      .hero::after {
+        position: absolute;
+        right: -120px;
+        bottom: -240px;
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba(215, 237, 114, 0.3);
+        border-radius: 50%;
+        content: "";
+        box-shadow: 0 0 0 44px rgba(215, 237, 114, 0.045), 0 0 0 90px rgba(215, 237, 114, 0.035);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 680px;
+        padding: 72px 0 84px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--lime);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 25px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      h1 {
+        max-width: 650px;
+        margin: 22px 0 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(48px, 7vw, 82px);
+        font-weight: 400;
+        letter-spacing: -3.5px;
+        line-height: 0.99;
+      }
+
+      h1 em {
+        color: var(--lime);
+        font-weight: 400;
+      }
+
+      .hero-content > p {
+        max-width: 500px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .text-link {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 14px;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .text-link span {
+        color: var(--lime);
+        font-size: 18px;
+      }
+
+      .hero-note {
+        position: absolute;
+        right: 0;
+        bottom: 34px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .intro {
+        padding: 78px 0 74px;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .section-label {
+        margin: 0 0 18px;
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 4vw, 48px);
+        font-weight: 400;
+        letter-spacing: -1.5px;
+        line-height: 1.1;
+      }
+
+      .intro-copy p {
+        margin: 3px 0 20px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      .inline-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .inline-link span {
+        font-size: 18px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .stat {
+        padding: 4px 24px;
+        border-right: 1px solid var(--line);
+      }
+
+      .stat:first-child {
+        padding-left: 0;
+      }
+
+      .stat:last-child {
+        border: 0;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: -1px;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .programs {
+        padding: 78px 0 88px;
+        background: #edf1e9;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 34px;
+      }
+
+      .section-heading .section-label {
+        margin-bottom: 14px;
+      }
+
+      .section-heading > p {
+        max-width: 340px;
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .program-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .program-card {
+        min-height: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px;
+        background: var(--white);
+        border: 1px solid rgba(19, 45, 42, 0.07);
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .program-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 32px rgba(19, 45, 42, 0.08);
+      }
+
+      .program-icon {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 24px;
+        color: var(--green);
+        background: #edf5e6;
+        border-radius: 50%;
+        font-size: 20px;
+      }
+
+      .program-card h3 {
+        margin: 0 0 9px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 400;
+      }
+
+      .program-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .program-card .inline-link {
+        margin-top: auto;
+        padding-top: 22px;
+        font-size: 12px;
+      }
+
+      .quickdesk {
+        padding: 72px 0 78px;
+        background: var(--white);
+      }
+
+      .quickdesk-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .quickdesk-heading h2 {
+        max-width: 550px;
+      }
+
+      .quickdesk-heading > p {
+        max-width: 360px;
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .quickdesk-tools {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 28px 0 18px;
+      }
+
+      .quickdesk-search-wrap {
+        position: relative;
+        width: min(100%, 340px);
+      }
+
+      .quickdesk-search-wrap svg {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        color: var(--muted);
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      .quickdesk-search {
+        width: 100%;
+        min-height: 46px;
+        padding: 0 14px 0 42px;
+        color: var(--ink);
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        font: inherit;
+        font-size: 13px;
+      }
+
+      .quickdesk-search::placeholder {
+        color: #78847f;
+      }
+
+      .quickdesk-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .quickdesk-filter {
+        min-height: 36px;
+        padding: 0 13px;
+        color: #52625d;
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .quickdesk-filter:hover,
+      .quickdesk-filter[aria-pressed="true"] {
+        color: var(--white);
+        background: var(--green);
+        border-color: var(--green);
+      }
+
+      .quickdesk-status {
+        min-height: 20px;
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .quickdesk-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .quickdesk-card {
+        min-height: 184px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 3px;
+      }
+
+      .quickdesk-card[hidden] {
+        display: none;
+      }
+
+      .quickdesk-category {
+        margin: 0 0 12px;
+        color: var(--green);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      .quickdesk-card h3 {
+        margin: 0 0 7px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .quickdesk-detail {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .quickdesk-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: auto;
+        padding-top: 18px;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .quickdesk-action:hover {
+        color: var(--green-dark);
+      }
+
+      .quickdesk-empty {
+        margin: 18px 0 0;
+        padding: 24px;
+        color: var(--muted);
+        background: var(--cream);
+        border: 1px dashed #cbd4c8;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .quickdesk-source {
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .quickdesk-source a {
+        color: var(--green);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        clip-path: inset(50%);
+      }
+
+      .assistant-launcher {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 5;
+        min-height: 54px;
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        padding: 0 18px;
+        color: var(--white);
+        background: var(--green-dark);
+        border: 1px solid var(--green-dark);
+        border-radius: 999px;
+        box-shadow: 0 8px 26px rgba(6, 75, 60, 0.24);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      .assistant-launcher:hover {
+        background: var(--green);
+        transform: translateY(-2px);
+      }
+
+      .assistant-launcher-icon {
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        color: var(--green-dark);
+        background: var(--lime);
+        border-radius: 50%;
+        font-size: 16px;
+      }
+
+      .assistant-panel {
+        position: fixed;
+        right: 24px;
+        bottom: 92px;
+        z-index: 5;
+        width: min(420px, calc(100vw - 32px));
+        height: min(610px, calc(100dvh - 120px));
+        min-height: 390px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: 0 22px 70px rgba(19, 45, 42, 0.2);
+      }
+
+      .assistant-panel[hidden] {
+        display: none;
+      }
+
+      .assistant-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 17px 18px;
+        color: var(--white);
+        background: var(--green-dark);
+      }
+
+      .assistant-heading {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .assistant-avatar {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        color: var(--green-dark);
+        background: var(--lime);
+        border-radius: 50%;
+        font-size: 17px;
+      }
+
+      .assistant-heading strong,
+      .assistant-heading span {
+        display: block;
+      }
+
+      .assistant-heading strong {
+        font-size: 14px;
+      }
+
+      .assistant-heading span {
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 10px;
+      }
+
+      .assistant-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .assistant-icon-button {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 17px;
+      }
+
+      .assistant-icon-button:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .assistant-notice {
+        padding: 10px 17px;
+        color: #53655d;
+        background: #f0f4e9;
+        border-bottom: 1px solid var(--line);
+        font-size: 10px;
+        line-height: 1.55;
+      }
+
+      .assistant-messages {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        overflow-y: auto;
+        padding: 18px;
+        scroll-behavior: smooth;
+      }
+
+      .assistant-message {
+        max-width: 90%;
+        align-self: flex-start;
+        color: var(--ink);
+        font-size: 13px;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+      }
+
+      .assistant-message p {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+
+      .assistant-message-user {
+        align-self: flex-end;
+        padding: 10px 13px;
+        color: var(--white);
+        background: var(--green);
+        border-radius: 12px 12px 3px 12px;
+      }
+
+      .assistant-message-bot {
+        padding: 11px 13px;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 12px 12px 12px 3px;
+      }
+
+      .assistant-sources {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px 12px;
+        margin-top: 11px;
+        padding-top: 9px;
+        border-top: 1px solid var(--line);
+      }
+
+      .assistant-sources a {
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 750;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .assistant-typing {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-height: 36px;
+      }
+
+      .assistant-typing span {
+        width: 6px;
+        height: 6px;
+        background: #7d9185;
+        border-radius: 50%;
+        animation: assistant-pulse 900ms ease-in-out infinite alternate;
+      }
+
+      .assistant-typing span:nth-child(2) {
+        animation-delay: 150ms;
+      }
+
+      .assistant-typing span:nth-child(3) {
+        animation-delay: 300ms;
+      }
+
+      @keyframes assistant-pulse {
+        to {
+          opacity: 0.35;
+          transform: translateY(-3px);
+        }
+      }
+
+      .assistant-suggestions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        padding: 0 18px 12px;
+      }
+
+      .assistant-suggestion {
+        padding: 7px 10px;
+        color: var(--green-dark);
+        background: var(--white);
+        border: 1px solid #dce5d8;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 10px;
+        line-height: 1.3;
+      }
+
+      .assistant-suggestion:hover {
+        background: #f0f4e9;
+      }
+
+      .assistant-form {
+        display: flex;
+        align-items: flex-end;
+        gap: 9px;
+        padding: 12px 14px 14px;
+        background: var(--white);
+        border-top: 1px solid var(--line);
+      }
+
+      .assistant-input {
+        width: 100%;
+        min-height: 43px;
+        max-height: 104px;
+        resize: vertical;
+        padding: 11px 12px;
+        color: var(--ink);
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        font: inherit;
+        font-size: 12px;
+      }
+
+      .assistant-input::placeholder {
+        color: #78847f;
+      }
+
+      .assistant-send {
+        width: 43px;
+        height: 43px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        color: var(--white);
+        background: var(--green);
+        border: 1px solid var(--green);
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .assistant-send:hover:not(:disabled) {
+        background: var(--green-dark);
+      }
+
+      .assistant-send:disabled,
+      .assistant-input:disabled,
+      .assistant-suggestion:disabled {
+        cursor: wait;
+        opacity: 0.6;
+      }
+
+      .assistant-privacy {
+        margin: 0;
+        padding: 0 14px 10px;
+        color: var(--muted);
+        background: var(--white);
+        text-align: center;
+        font-size: 9px;
+      }
+
+      .campus {
+        padding: 84px 0;
+      }
+
+      .campus-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .campus-image {
+        position: relative;
+        min-height: 390px;
+        background: url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1100&q=85") center / cover;
+      }
+
+      .campus-image::after {
+        position: absolute;
+        inset: 14px -14px -14px 14px;
+        z-index: -1;
+        border: 1px solid #b9cc9d;
+        content: "";
+      }
+
+      .campus-copy h2 {
+        max-width: 440px;
+      }
+
+      .campus-copy > p:not(.section-label) {
+        margin: 20px 0 25px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .campus-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+
+      .campus-points span {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #41534d;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .campus-points span::before {
+        width: 6px;
+        height: 6px;
+        flex: 0 0 auto;
+        background: #9db752;
+        border-radius: 50%;
+        content: "";
+      }
+
+      .cta {
+        padding: 54px 0;
+        color: var(--white);
+        background: var(--green-dark);
+      }
+
+      .cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .cta h2 {
+        max-width: 620px;
+        font-size: clamp(30px, 4vw, 43px);
+      }
+
+      .cta p {
+        margin: 12px 0 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 13px;
+      }
+
+      .cta .button {
+        flex-shrink: 0;
+        color: var(--green-dark);
+        background: var(--lime);
+        border-color: var(--lime);
+      }
+
+      .cta .button:hover {
+        background: #e3f69a;
+      }
+
+      footer {
+        padding: 34px 0;
+        background: #f1f3ed;
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .footer-inner p,
+      .footer-links {
+        margin: 0;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 22px;
+      }
+
+      .footer-links a:hover {
+        color: var(--green);
+      }
+
+      :focus-visible {
+        outline: 3px solid #8e88ff;
+        outline-offset: 3px;
+      }
+
+      body {
+        background: #fbfbfe;
+        letter-spacing: -0.01em;
+      }
+
+      .topbar {
+        color: #e8e7ff;
+        background: #17172f;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        background: rgba(251, 251, 254, 0.94);
+        border-bottom-color: rgba(32, 33, 58, 0.08);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        min-height: 78px;
+      }
+
+      .brand {
+        gap: 13px;
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        background: linear-gradient(145deg, #716af2, #433bb6);
+        border: 0;
+        border-radius: 15px;
+        box-shadow: 0 7px 18px rgba(92, 85, 217, 0.24);
+        font-family: "Aptos", "Segoe UI", sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: -0.08em;
+      }
+
+      .brand-mark::before {
+        content: none;
+      }
+
+      .brand-copy strong {
+        color: #20213a;
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-copy span {
+        color: #85869b;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+      }
+
+      .nav-links {
+        gap: 24px;
+        color: #5d5e75;
+        font-size: 12px;
+      }
+
+      .nav-links a:not(.button):hover,
+      .nav-links a:not(.button):focus-visible {
+        color: var(--green);
+      }
+
+      .button {
+        min-height: 47px;
+        border-radius: 999px;
+        box-shadow: 0 7px 16px rgba(92, 85, 217, 0.16);
+      }
+
+      .button:hover {
+        background: #4841c0;
+      }
+
+      .menu-toggle {
+        border-radius: 12px;
+      }
+
+      .hero {
+        min-height: 620px;
+        background:
+          radial-gradient(ellipse at 79% 25%, rgba(166, 157, 255, 0.26), transparent 34%),
+          linear-gradient(110deg, rgba(20, 20, 48, 0.97) 0%, rgba(36, 34, 84, 0.88) 48%, rgba(42, 38, 91, 0.39) 100%),
+          url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=85") center 48% / cover;
+      }
+
+      .hero::after {
+        right: -80px;
+        bottom: -270px;
+        border-color: rgba(214, 248, 120, 0.36);
+        box-shadow: 0 0 0 46px rgba(214, 248, 120, 0.055), 0 0 0 98px rgba(214, 248, 120, 0.035);
+      }
+
+      .hero-content {
+        max-width: 720px;
+      }
+
+      .eyebrow {
+        letter-spacing: 2.4px;
+      }
+
+      h1 {
+        max-width: 700px;
+        font-family: "Aptos Display", "Segoe UI", Inter, sans-serif;
+        font-size: clamp(58px, 8vw, 94px);
+        font-weight: 750;
+        letter-spacing: -5px;
+        line-height: 0.98;
+      }
+
+      h1 em {
+        color: var(--lime);
+        font-style: normal;
+      }
+
+      .hero-content > p {
+        max-width: 520px;
+        font-size: 16px;
+      }
+
+      h2,
+      .program-card h3,
+      .quickdesk-card h3,
+      .stat strong {
+        font-family: "Aptos Display", "Segoe UI", Inter, sans-serif;
+        letter-spacing: -0.045em;
+        font-weight: 650;
+      }
+
+      h2 {
+        font-size: clamp(36px, 4vw, 50px);
+      }
+
+      .intro {
+        padding: 88px 0 82px;
+      }
+
+      .intro-grid {
+        gap: 88px;
+      }
+
+      .section-label {
+        color: var(--green);
+        letter-spacing: 2px;
+      }
+
+      .stats {
+        margin-top: 40px;
+        padding: 30px 0;
+        border-color: #e8e8f1;
+      }
+
+      .stat strong {
+        color: #39357e;
+      }
+
+      .programs {
+        background:
+          radial-gradient(ellipse at 88% 0%, rgba(113, 106, 242, 0.08), transparent 34%),
+          #f2f2fa;
+      }
+
+      .program-grid {
+        gap: 18px;
+      }
+
+      .program-card {
+        min-height: 242px;
+        padding: 28px;
+        border: 1px solid rgba(82, 78, 162, 0.08);
+        border-radius: 16px;
+        box-shadow: 0 8px 26px rgba(35, 35, 75, 0.035);
+      }
+
+      .program-card:hover {
+        box-shadow: 0 18px 36px rgba(35, 35, 75, 0.1);
+      }
+
+      .program-icon {
+        color: var(--green);
+        background: #eeedff;
+        border-radius: 13px;
+      }
+
+      .quickdesk {
+        background: #fbfbfe;
+      }
+
+      .quickdesk-card {
+        border-radius: 14px;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .quickdesk-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(35, 35, 75, 0.07);
+      }
+
+      .quickdesk-filter {
+        border-radius: 999px;
+      }
+
+      .quickdesk-search {
+        background: #fff;
+        border-radius: 12px;
+      }
+
+      .quickdesk-filter:hover,
+      .quickdesk-filter[aria-pressed="true"] {
+        background: var(--green);
+      }
+
+      .legacy-notice {
+        margin: 22px 0 0;
+        padding: 13px 15px;
+        color: #5b4b22;
+        background: #fff8df;
+        border: 1px solid #f1e4b7;
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 1.65;
+      }
+
+      .campus-image {
+        border-radius: 18px;
+      }
+
+      .campus-image::after {
+        border-color: #b7b2f6;
+        border-radius: 18px;
+      }
+
+      .campus-points span::before {
+        background: #716af2;
+      }
+
+      .cta {
+        background:
+          radial-gradient(ellipse at 80% 10%, rgba(142, 136, 255, 0.3), transparent 36%),
+          linear-gradient(110deg, #20203e, #302d68);
+      }
+
+      .cta .button {
+        color: #20203e;
+        background: var(--lime);
+        border-color: var(--lime);
+      }
+
+      .cta .button:hover {
+        background: #e4ffa1;
+      }
+
+      footer {
+        background: #f0f0f8;
+      }
+
+      .assistant-launcher {
+        background: linear-gradient(145deg, #625be2, #39347f);
+        border-color: #514bc7;
+        border-radius: 999px;
+        box-shadow: 0 12px 30px rgba(63, 58, 167, 0.3);
+      }
+
+      .assistant-launcher:hover {
+        background: #4841c0;
+      }
+
+      .assistant-launcher-icon,
+      .assistant-avatar {
+        color: #333071;
+        background: var(--lime);
+      }
+
+      .assistant-panel {
+        border: 1px solid #e1e1ed;
+        border-radius: 18px;
+        box-shadow: 0 24px 75px rgba(25, 25, 64, 0.22);
+      }
+
+      .assistant-header {
+        background:
+          radial-gradient(ellipse at 100% 0%, rgba(171, 164, 255, 0.24), transparent 45%),
+          #25234c;
+      }
+
+      .assistant-notice {
+        background: #f3f2ff;
+      }
+
+      .assistant-message-user,
+      .assistant-send {
+        background: #5c55d9;
+        border-color: #5c55d9;
+      }
+
+      .assistant-message-user {
+        border-radius: 14px 14px 4px 14px;
+      }
+
+      .assistant-message-bot {
+        border-radius: 14px 14px 14px 4px;
+      }
+
+      .assistant-suggestion {
+        border-radius: 999px;
+      }
+
+      .assistant-input {
+        background: #f8f8fc;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .nav {
+          gap: 18px;
+        }
+
+        .nav-links {
+          gap: 16px;
+        }
+
+        .brand-copy strong {
+          font-size: 17px;
+        }
+
+        .intro-grid {
+          gap: 42px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .menu-toggle {
+          display: inline-grid;
+          place-items: center;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          right: 24px;
+          width: min(340px, calc(100vw - 48px));
+          display: none;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 0;
+          padding: 8px 18px 18px;
+          background: var(--white);
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          box-shadow: 0 16px 38px rgba(32, 33, 58, 0.14);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        .nav-links > a:not(.button) {
+          display: block;
+          padding: 13px 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links .button {
+          margin-top: 14px;
+        }
+
+        .intro-grid,
+        .campus-grid {
+          gap: 42px;
+        }
+
+        .quickdesk-tools {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .quickdesk-search-wrap {
+          width: 100%;
+        }
+
+        .quickdesk-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 36px, 480px);
+        }
+
+        .topbar-inner {
+          justify-content: center;
+          min-height: 34px;
+        }
+
+        .topbar-links {
+          display: none;
+        }
+
+        .nav {
+          min-height: 70px;
+        }
+
+        .brand-mark {
+          width: 42px;
+          height: 42px;
+        }
+
+        .brand-copy strong {
+          font-size: 16px;
+        }
+
+        .brand-copy span {
+          font-size: 8px;
+        }
+
+        .menu-toggle {
+          display: inline-grid;
+          place-items: center;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          width: auto;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 8px 18px 18px;
+          background: var(--cream);
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-links > a:not(.button) {
+          display: block;
+          padding: 13px 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links .button {
+          margin-top: 14px;
+        }
+
+        .hero {
+          min-height: 560px;
+          background-position: 58% center;
+        }
+
+        .hero-content {
+          padding: 68px 0 86px;
+        }
+
+        h1 {
+          font-size: clamp(48px, 13vw, 68px);
+          letter-spacing: -3px;
+        }
+
+        .hero-content > p {
+          font-size: 14px;
+        }
+
+        .hero-note {
+          right: auto;
+          left: 0;
+          font-size: 9px;
+        }
+
+        .intro,
+        .programs,
+        .quickdesk,
+        .campus {
+          padding: 60px 0;
+        }
+
+        .intro-grid,
+        .campus-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 22px 0;
+          margin-top: 32px;
+        }
+
+        .stat {
+          padding: 4px 16px;
+        }
+
+        .stat:nth-child(odd) {
+          padding-left: 0;
+          border-right: 1px solid var(--line);
+        }
+
+        .stat:nth-child(even) {
+          border: 0;
+        }
+
+        .stat strong {
+          font-size: 31px;
+        }
+
+        .section-heading {
+          display: block;
+        }
+
+        .section-heading > p {
+          margin-top: 14px;
+        }
+
+        .quickdesk-heading {
+          display: block;
+        }
+
+        .quickdesk-heading > p {
+          margin-top: 14px;
+        }
+
+        .quickdesk-filters {
+          gap: 7px;
+        }
+
+        .quickdesk-filter {
+          min-height: 34px;
+          padding: 0 11px;
+        }
+
+        .quickdesk-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .program-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .program-card {
+          min-height: 220px;
+          border-radius: 14px;
+        }
+
+        .campus-image {
+          min-height: 280px;
+          margin-right: 12px;
+          margin-bottom: 12px;
+        }
+
+        .campus-points {
+          gap: 12px 8px;
+        }
+
+        .assistant-launcher {
+          right: 16px;
+          bottom: 16px;
+          min-height: 50px;
+          padding: 0 15px;
+        }
+
+        .assistant-panel {
+          right: 8px;
+          bottom: 76px;
+          width: calc(100vw - 16px);
+          height: min(650px, calc(100dvh - 90px));
+          min-height: 360px;
+          border-radius: 10px;
+        }
+
+        .assistant-header {
+          padding: 14px;
+        }
+
+        .assistant-messages {
+          padding: 14px;
+        }
+
+        .assistant-suggestions {
+          padding-right: 14px;
+          padding-left: 14px;
+        }
+
+        .cta {
+          padding: 42px 0;
+        }
+
+        .cta-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .footer-links {
+          flex-wrap: wrap;
+          gap: 12px 20px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      :root {
+        --ink: #282629;
+        --muted: #716d70;
+        --green: #751e30;
+        --green-dark: #401722;
+        --lime: #d7bc83;
+        --cream: #f7f5f2;
+        --line: #e8e1dc;
+        --white: #fff;
+        --gold: #b89a5e;
+      }
+
+      html {
+        scroll-padding-top: 100px;
+      }
+
+      body {
+        color: var(--ink);
+        background: #fcfbf9;
+        font-family: "Aptos", "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+
+      .container {
+        width: min(1240px, calc(100% - 64px));
+      }
+
+      .topbar {
+        color: #f3ece7;
+        background: #2b2022;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+      }
+
+      .topbar-inner {
+        min-height: 34px;
+      }
+
+      .topbar-links {
+        gap: 20px;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 6;
+        background: rgba(252, 251, 249, 0.97);
+        border-bottom: 1px solid rgba(40, 38, 41, 0.1);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        position: relative;
+        min-height: 86px;
+        gap: 28px;
+      }
+
+      .brand {
+        gap: 13px;
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 48px;
+        color: #fff;
+        background: var(--green);
+        border: 1px solid rgba(184, 154, 94, 0.78);
+        border-radius: 50%;
+        box-shadow: none;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .brand-copy strong {
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+      }
+
+      .brand-copy span {
+        margin-top: 4px;
+        color: #777174;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.65px;
+      }
+
+      .nav-links {
+        position: static;
+        gap: 20px;
+        color: #423b3d;
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .nav-links a:not(.button):hover,
+      .nav-links a:not(.button):focus-visible {
+        color: var(--green);
+      }
+
+      .button {
+        min-height: 46px;
+        padding: 0 21px;
+        background: var(--green);
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        box-shadow: none;
+        letter-spacing: 0.025em;
+      }
+
+      .button:hover {
+        background: #561523;
+      }
+
+      .button-light {
+        color: var(--green-dark);
+        background: #fff;
+        border-color: #fff;
+      }
+
+      .button-light:hover {
+        color: #fff;
+        background: var(--green-dark);
+        border-color: var(--green-dark);
+      }
+
+      .nav-dropdown {
+        position: relative;
+      }
+
+      .nav-dropdown-toggle,
+      .search-toggle {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 5px;
+        color: #423b3d;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .nav-dropdown-toggle:hover,
+      .search-toggle:hover {
+        color: var(--green);
+      }
+
+      .nav-mega {
+        position: absolute;
+        top: calc(100% + 17px);
+        right: -200px;
+        z-index: 7;
+        width: min(740px, calc(100vw - 64px));
+        display: none;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 34px;
+        padding: 32px;
+        background: #fff;
+        border-top: 3px solid var(--gold);
+        box-shadow: 0 22px 50px rgba(37, 26, 26, 0.18);
+      }
+
+      .nav-mega.is-open {
+        display: grid;
+      }
+
+      .nav-mega-intro {
+        padding-right: 22px;
+        border-right: 1px solid var(--line);
+      }
+
+      .nav-mega-intro strong {
+        display: block;
+        margin: 0 0 10px;
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .nav-mega-intro p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.8;
+      }
+
+      .nav-mega-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px 22px;
+      }
+
+      .nav-mega-links a {
+        padding: 13px 0;
+        color: var(--ink);
+        border-bottom: 1px solid var(--line);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .nav-mega-links a:hover {
+        color: var(--green);
+      }
+
+      .search-toggle {
+        width: 40px;
+        padding: 0;
+      }
+
+      .site-search {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        z-index: 8;
+        width: min(460px, calc(100vw - 32px));
+        padding: 20px;
+        background: #fff;
+        border-top: 3px solid var(--gold);
+        box-shadow: 0 18px 40px rgba(37, 26, 26, 0.17);
+      }
+
+      .site-search[hidden] {
+        display: none;
+      }
+
+      .site-search label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .site-search-row {
+        display: flex;
+        gap: 8px;
+      }
+
+      .site-search input {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        padding: 0 12px;
+        color: var(--ink);
+        background: #fcfbf9;
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        font: inherit;
+        font-size: 13px;
+      }
+
+      .site-search-submit {
+        min-height: 44px;
+        padding: 0 16px;
+        color: #fff;
+        background: var(--green);
+        border: 0;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .site-search-results {
+        display: grid;
+        gap: 3px;
+        margin-top: 12px;
+      }
+
+      .site-search-results a {
+        padding: 10px 0;
+        color: var(--green);
+        border-bottom: 1px solid var(--line);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .site-search-status {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: min(680px, calc(100svh - 120px));
+        background:
+          linear-gradient(90deg, rgba(42, 18, 24, 0.9) 0%, rgba(52, 23, 30, 0.73) 45%, rgba(47, 24, 29, 0.12) 100%),
+          linear-gradient(0deg, rgba(31, 16, 20, 0.38), rgba(31, 16, 20, 0.02)),
+          url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2200&q=88") center 48% / cover;
+      }
+
+      .hero::after {
+        right: -105px;
+        bottom: -315px;
+        border-color: rgba(215, 188, 131, 0.56);
+        box-shadow: 0 0 0 48px rgba(215, 188, 131, 0.08), 0 0 0 102px rgba(215, 188, 131, 0.04);
+      }
+
+      .hero-content {
+        max-width: 790px;
+        padding: 104px 0 128px;
+      }
+
+      .eyebrow {
+        color: #e5cf9f;
+        font-size: 10px;
+        letter-spacing: 2.4px;
+      }
+
+      h1,
+      h2,
+      .program-card h3,
+      .quickdesk-card h3,
+      .stat strong {
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 24px 0;
+        font-size: clamp(54px, 7vw, 88px);
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 1.02;
+      }
+
+      h1 em {
+        color: #e7d09f;
+        font-style: normal;
+      }
+
+      .hero-content > p {
+        max-width: 560px;
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .hero-note {
+        right: 0;
+        bottom: 30px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .intro,
+      .programs,
+      .quickdesk,
+      .campus,
+      .editorial-section,
+      .student-hub,
+      .admissions-section {
+        padding: 92px 0;
+      }
+
+      h2 {
+        font-size: clamp(34px, 4vw, 52px);
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 1.1;
+      }
+
+      .section-label {
+        color: var(--green);
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      .intro-grid {
+        gap: 92px;
+      }
+
+      .intro-copy p {
+        font-size: 15px;
+      }
+
+      .legacy-notice {
+        padding: 13px 16px;
+        background: #f6f0e5;
+        border-color: #e7dbc3;
+        border-radius: 0;
+      }
+
+      .stats {
+        margin-top: 42px;
+        padding: 28px 0;
+        border-color: var(--line);
+      }
+
+      .stat strong {
+        color: var(--green-dark);
+        font-size: 28px;
+      }
+
+      .programs {
+        background: #f4f0ec;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+
+      .section-heading > p,
+      .quickdesk-heading > p {
+        font-size: 13px;
+        line-height: 1.85;
+      }
+
+      .program-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .program-card {
+        min-height: 250px;
+        padding: 28px;
+        background: #fff;
+        border: 1px solid #ebe4de;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .program-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 28px rgba(50, 30, 30, 0.08);
+      }
+
+      .program-icon {
+        color: var(--green);
+        background: #f4ece8;
+        border-radius: 50%;
+      }
+
+      .program-card h3 {
+        font-size: 23px;
+        font-weight: 400;
+      }
+
+      .editorial-section {
+        background: #fff;
+      }
+
+      .editorial-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 64px;
+        align-items: center;
+      }
+
+      .editorial-image,
+      .campus-image {
+        min-height: 420px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .editorial-image {
+        background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85");
+      }
+
+      .editorial-copy > p:not(.section-label) {
+        max-width: 470px;
+        margin: 20px 0 24px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .editorial-copy .legacy-notice {
+        max-width: 520px;
+      }
+
+      .campus {
+        background: #f5f2ef;
+      }
+
+      .campus-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 76px;
+      }
+
+      .campus-image {
+        background-image: url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=85");
+        border-radius: 0;
+      }
+
+      .campus-image::after {
+        border-color: #c9b68f;
+        border-radius: 0;
+      }
+
+      .campus-points span::before {
+        background: var(--gold);
+      }
+
+      .feature-link-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .feature-link {
+        min-height: 154px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid var(--line);
+        transition: border-color 160ms ease, transform 160ms ease;
+      }
+
+      .feature-link:hover {
+        transform: translateY(-3px);
+        border-color: var(--gold);
+      }
+
+      .feature-link strong {
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .feature-link span {
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 750;
+      }
+
+      .admissions-section {
+        color: #fff;
+        background: var(--green-dark);
+      }
+
+      .admissions-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 52px;
+        align-items: center;
+      }
+
+      .admissions-section .section-label {
+        color: #e4ce9d;
+      }
+
+      .admissions-section p:not(.section-label) {
+        max-width: 570px;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 14px;
+        line-height: 1.85;
+      }
+
+      .admissions-card {
+        padding: 28px;
+        color: var(--ink);
+        background: #fff;
+        border-top: 3px solid var(--gold);
+      }
+
+      .admissions-card strong {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 400;
+      }
+
+      .admissions-card p {
+        margin: 0;
+        color: var(--muted) !important;
+        font-size: 12px !important;
+      }
+
+      .admissions-card .button {
+        margin-top: 19px;
+      }
+
+      .directory-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      .directory-card {
+        min-height: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      .directory-card h3 {
+        margin: 0 0 11px;
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 23px;
+        font-weight: 400;
+      }
+
+      .directory-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.75;
+      }
+
+      .directory-card .empty-state {
+        margin-top: auto;
+        padding-top: 18px;
+        color: #655842;
+        font-size: 10px;
+        font-weight: 700;
+      }
+
+      .updates {
+        background: #f4f0ec;
+      }
+
+      .updates-tabs {
+        display: inline-flex;
+        gap: 4px;
+        margin: 26px 0;
+        padding: 4px;
+        background: #eae3de;
+      }
+
+      .updates-tab {
+        min-height: 40px;
+        padding: 0 18px;
+        color: #625a59;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .updates-tab[aria-selected="true"] {
+        color: #fff;
+        background: var(--green);
+      }
+
+      .updates-panel[hidden] {
+        display: none;
+      }
+
+      .updates-empty {
+        min-height: 152px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      .updates-empty strong {
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 23px;
+        font-weight: 400;
+      }
+
+      .updates-empty span {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .student-hub {
+        background: #fff;
+      }
+
+      .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .hub-card {
+        min-height: 190px;
+        display: flex;
+        flex-direction: column;
+        padding: 22px;
+        background: #fcfbf9;
+        border: 1px solid var(--line);
+      }
+
+      .hub-card > span {
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .hub-card h3 {
+        margin: 14px 0 8px;
+        color: var(--green-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 21px;
+        font-weight: 400;
+      }
+
+      .hub-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.7;
+      }
+
+      .hub-card a {
+        margin-top: auto;
+        padding-top: 17px;
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .quickdesk {
+        background: #f5f2ef;
+      }
+
+      .quickdesk-card {
+        background: #fff;
+        border-radius: 0;
+      }
+
+      .quickdesk-filter:hover,
+      .quickdesk-filter[aria-pressed="true"] {
+        background: var(--green);
+        border-color: var(--green);
+      }
+
+      .quickdesk-search {
+        background: #fff;
+        border-radius: 0;
+      }
+
+      .quickdesk-source {
+        padding: 13px 15px;
+        background: #f6f0e5;
+      }
+
+      .cta {
+        padding: 62px 0;
+        background: var(--green-dark);
+      }
+
+      .cta .button {
+        color: var(--green-dark);
+        background: #e2d1aa;
+        border-color: #e2d1aa;
+      }
+
+      .cta .button:hover {
+        color: #fff;
+        background: var(--green);
+        border-color: var(--green);
+      }
+
+      footer {
+        padding: 0;
+        color: #ece5e1;
+        background: #241a1c;
+      }
+
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1.3fr repeat(3, 0.7fr);
+        gap: 42px;
+        padding: 54px 0 44px;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .footer-brand strong {
+        display: block;
+        color: #fff;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+      }
+
+      .footer-brand span {
+        display: block;
+        margin-top: 4px;
+        color: #c5b8b2;
+        font-size: 9px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .footer-description {
+        max-width: 280px;
+        margin: 18px 0 0;
+        color: #c5b8b2;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+
+      .footer-column h3 {
+        margin: 4px 0 16px;
+        color: #dfc99a;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .footer-column a {
+        display: block;
+        width: fit-content;
+        margin: 11px 0;
+        color: #ece5e1;
+        font-size: 11px;
+      }
+
+      .footer-column a:hover {
+        color: #e2d1aa;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 17px 0;
+        color: #c5b8b2;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 10px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .assistant-launcher {
+        right: 24px;
+        bottom: 24px;
+        background: var(--green);
+        border-color: var(--green);
+        border-radius: 3px;
+        box-shadow: 0 8px 26px rgba(48, 20, 26, 0.23);
+      }
+
+      .assistant-launcher:hover {
+        background: #561523;
+      }
+
+      .assistant-launcher-icon,
+      .assistant-avatar {
+        color: #33291c;
+        background: #e2d1aa;
+      }
+
+      .assistant-panel {
+        border-radius: 3px;
+      }
+
+      .assistant-header {
+        background: var(--green-dark);
+      }
+
+      .assistant-notice {
+        background: #f6f0e5;
+      }
+
+      .assistant-message-user,
+      .assistant-send {
+        background: var(--green);
+        border-color: var(--green);
+      }
+
+      .assistant-suggestion {
+        border-radius: 2px;
+      }
+
+      .assistant-input {
+        background: #fcfbf9;
+        border-radius: 2px;
+      }
+
+      @media (max-width: 1080px) {
+        .nav {
+          gap: 20px;
+        }
+
+        .brand-copy strong {
+          font-size: 17px;
+        }
+
+        .nav-links {
+          gap: 14px;
+        }
+
+        .nav-links > a:not(.button),
+        .nav-dropdown-toggle {
+          font-size: 11px;
+        }
+
+        .nav-links > a[href="#student-hub"] {
+          display: none;
+        }
+
+        .feature-link-grid,
+        .hub-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(100% - 40px, 720px);
+        }
+
+        .nav {
+          min-height: 74px;
+        }
+
+        .brand-mark {
+          width: 43px;
+          height: 43px;
+        }
+
+        .menu-toggle {
+          display: inline-grid;
+          place-items: center;
+          border-radius: 2px;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          display: none;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 0;
+          padding: 10px 22px 22px;
+          background: #fcfbf9;
+          border: 1px solid var(--line);
+          box-shadow: 0 20px 38px rgba(37, 26, 26, 0.14);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        .nav-links > a:not(.button),
+        .nav-links > a[href="#student-hub"] {
+          display: block;
+          padding: 13px 0;
+          border-bottom: 1px solid var(--line);
+          font-size: 13px;
+        }
+
+        .nav-links .button {
+          margin-top: 14px;
+        }
+
+        .nav-dropdown-toggle {
+          width: 100%;
+          justify-content: space-between;
+          min-height: 46px;
+          border-bottom: 1px solid var(--line);
+          font-size: 13px;
+        }
+
+        .nav-mega {
+          position: static;
+          width: 100%;
+          grid-template-columns: 1fr;
+          gap: 14px;
+          padding: 18px 0 8px;
+          border-top: 0;
+          box-shadow: none;
+        }
+
+        .nav-mega-intro {
+          display: none;
+        }
+
+        .nav-mega-links {
+          grid-template-columns: 1fr 1fr;
+          gap: 0 15px;
+        }
+
+        .site-search {
+          top: calc(100% + 12px);
+          right: 0;
+        }
+
+        .topbar-inner {
+          justify-content: center;
+        }
+
+        .topbar-links {
+          display: none;
+        }
+
+        .hero {
+          min-height: 590px;
+        }
+
+        .intro-grid,
+        .campus-grid,
+        .editorial-grid,
+        .admissions-grid {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .editorial-image {
+          min-height: 340px;
+          order: 2;
+        }
+
+        .campus-image {
+          min-height: 340px;
+        }
+
+        .program-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .directory-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 36px, 520px);
+        }
+
+        .topbar-inner {
+          min-height: 32px;
+          font-size: 10px;
+        }
+
+        .nav {
+          min-height: 68px;
+        }
+
+        .brand {
+          gap: 10px;
+        }
+
+        .brand-mark {
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+        }
+
+        .brand-copy strong {
+          font-size: 15px;
+        }
+
+        .brand-copy span {
+          font-size: 7px;
+          letter-spacing: 1.3px;
+        }
+
+        .hero {
+          min-height: 560px;
+          background-position: 58% center;
+        }
+
+        .hero-content {
+          padding: 70px 0 100px;
+        }
+
+        h1 {
+          font-size: clamp(48px, 13vw, 68px);
+          letter-spacing: -0.045em;
+        }
+
+        .hero-content > p {
+          font-size: 14px;
+        }
+
+        .hero-actions {
+          align-items: stretch;
+          flex-direction: column;
+          width: fit-content;
+          max-width: 100%;
+        }
+
+        .hero-actions .text-link {
+          min-height: 36px;
+          padding-left: 0;
+        }
+
+        .hero-note {
+          right: auto;
+          left: 18px;
+          bottom: 22px;
+          max-width: calc(100% - 36px);
+          font-size: 9px;
+        }
+
+        .intro,
+        .programs,
+        .quickdesk,
+        .campus,
+        .editorial-section,
+        .student-hub,
+        .admissions-section {
+          padding: 64px 0;
+        }
+
+        .intro-grid {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px 0;
+          margin-top: 28px;
+        }
+
+        .stat {
+          padding: 4px 12px;
+        }
+
+        .stat:nth-child(odd) {
+          padding-left: 0;
+        }
+
+        .stat strong {
+          font-size: 22px;
+        }
+
+        .section-heading {
+          display: block;
+        }
+
+        .section-heading > p {
+          margin-top: 15px;
+        }
+
+        .program-grid,
+        .directory-grid,
+        .feature-link-grid,
+        .hub-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .program-card {
+          min-height: 214px;
+          padding: 23px;
+        }
+
+        .editorial-image,
+        .campus-image {
+          min-height: 270px;
+        }
+
+        .campus-image {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+
+        .campus-points {
+          grid-template-columns: 1fr;
+        }
+
+        .admissions-grid {
+          gap: 25px;
+        }
+
+        .feature-link {
+          min-height: 116px;
+        }
+
+        .updates-tabs {
+          display: flex;
+          width: 100%;
+        }
+
+        .updates-tab {
+          flex: 1;
+        }
+
+        .quickdesk-tools {
+          align-items: stretch;
+        }
+
+        .quickdesk-filters {
+          gap: 7px;
+        }
+
+        .quickdesk-filter {
+          padding: 0 10px;
+        }
+
+        .nav-links {
+          max-height: calc(100svh - 100px);
+          overflow-y: auto;
+        }
+
+        .nav-mega-links {
+          grid-template-columns: 1fr;
+        }
+
+        .site-search {
+          right: -2px;
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 25px 18px;
+          padding: 42px 0 30px;
+        }
+
+        .footer-brand-column {
+          grid-column: 1 / -1;
+        }
+
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .assistant-launcher {
+          right: 14px;
+          bottom: 14px;
+          min-height: 48px;
+          padding: 0 14px;
+        }
+
+        .assistant-panel {
+          right: 8px;
+          bottom: 72px;
+          width: calc(100vw - 16px);
+          height: min(640px, calc(100dvh - 86px));
+          min-height: 350px;
+        }
+      }
+
+      .reveal {
+        animation: rise-in 600ms both;
+      }
+
+      @keyframes rise-in {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>NEXORA INSTITUTE OF TECHNOLOGY</span>
+        <div class="topbar-links" aria-label="Quick links">
+          <a href="/student-dashboard">Student hub</a>
+          <a href="/events">News &amp; events</a>
+          <a href="#quickdesk">Campus resources</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="NEXORA Institute of Technology home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-copy">
+            <strong>NEXORA</strong>
+            <span>INSTITUTE OF TECHNOLOGY</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="/academics">Academics</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" id="discover-toggle" type="button" aria-expanded="false" aria-controls="discover-panel">
+              Discover <span aria-hidden="true">⌄</span>
+            </button>
+            <div class="nav-mega" id="discover-panel">
+              <div class="nav-mega-intro">
+                <strong>Explore NEXORA</strong>
+                <p>Find your way to the communities, ideas, and resources that matter to you.</p>
+              </div>
+              <div class="nav-mega-links">
+                <a href="#research">Research</a>
+                <a href="/faculty-directory">Faculty directory</a>
+                <a href="#campus">Campus life</a>
+                <a href="/placements">Placements</a>
+                <a href="/events">Events</a>
+                <a href="/student-dashboard">Student dashboard</a>
+                <a href="/faculty-dashboard">Faculty dashboard</a>
+                <a href="/attendance">Attendance</a>
+                <a href="/notices">Notices</a>
+                <a href="/study-materials">Study materials</a>
+                <a href="/assistant">AI College Assistant</a>
+              </div>
+            </div>
+          </div>
+          <a href="/student-dashboard">Student dashboard</a>
+          <button class="search-toggle" id="search-toggle" type="button" aria-expanded="false" aria-controls="site-search" aria-label="Open site search">
+            <svg width="19" height="19" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.7" cy="8.7" r="5.7" stroke="currentColor" stroke-width="1.5" />
+              <path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <a class="button" href="/admissions">Admissions <span aria-hidden="true">↗</span></a>
+        </div>
+        <form class="site-search" id="site-search" role="search" hidden>
+          <label for="site-search-input">Search NEXORA</label>
+          <div class="site-search-row">
+            <input id="site-search-input" type="search" maxlength="60" placeholder="Search pages and resources" autocomplete="off" />
+            <button class="site-search-submit" type="submit">Search</button>
+          </div>
+          <div class="site-search-results" id="site-search-results"></div>
+          <p class="site-search-status" id="site-search-status" role="status" aria-live="polite">Search page sections and student resources.</p>
+        </form>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content reveal">
+          <span class="eyebrow">NEXORA INSTITUTE OF TECHNOLOGY</span>
+          <h1 id="hero-title">Ideas shape the <em>future.</em></h1>
+          <p>
+            A place to ask better questions, explore ambitious ideas, and build
+            a future with purpose.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="/academics">Explore academics <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#about">Discover NEXORA <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="container hero-note">Illustrative campus photograph · Replace with approved NEXORA imagery</div>
+      </section>
+
+      <section class="intro" id="about">
+        <div class="container">
+          <div class="intro-grid">
+            <div>
+              <p class="section-label">A university for what comes next</p>
+              <h2>Learning begins with the courage to imagine more.</h2>
+            </div>
+            <div class="intro-copy">
+              <p>
+                NEXORA Institute of Technology is building a home for discovery,
+                thoughtful teaching, and ideas put into practice. This page is
+                a starting point for the NEXORA community.
+              </p>
+              <p class="legacy-notice">
+                Official NEXORA academic, campus, and institutional information
+                has not yet been provided. Content below is clearly marked
+                wherever a verified NEXORA source is needed.
+              </p>
+            </div>
+          </div>
+          <div class="stats" aria-label="NEXORA values">
+            <div class="stat"><strong>Question</strong><span>Stay curious</span></div>
+            <div class="stat"><strong>Explore</strong><span>Look beyond the obvious</span></div>
+            <div class="stat"><strong>Create</strong><span>Put ideas into practice</span></div>
+            <div class="stat"><strong>Contribute</strong><span>Build with purpose</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="programs" id="academics" aria-labelledby="academics-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Academics</p>
+              <h2 id="academics-title">A world of questions to explore.</h2>
+            </div>
+            <p>
+              Find a starting point for your academic journey. NEXORA's verified
+              course catalog will be published here when available.
+            </p>
+          </div>
+          <div class="program-grid">
+            <article class="program-card">
+              <span class="program-icon" aria-hidden="true">01</span>
+              <h3>Program directory</h3>
+              <p>Explore course names, requirements, and learning pathways when the official catalog is available.</p>
+              <a class="inline-link" href="/academics">Explore academic records <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="program-card">
+              <span class="program-icon" aria-hidden="true">02</span>
+              <h3>Academic experience</h3>
+              <p>Discover NEXORA's approach to learning through verified academic information.</p>
+              <a class="inline-link" href="/academics">Explore academics <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="program-card">
+              <span class="program-icon" aria-hidden="true">03</span>
+              <h3>Academic resources</h3>
+              <p>Find study materials and academic guidance once NEXORA's student resources are connected.</p>
+              <a class="inline-link" href="/study-materials">Open study materials <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="research">
+        <div class="container editorial-grid">
+          <div class="editorial-image" role="img" aria-label="Illustrative university learning community photograph"></div>
+          <div class="editorial-copy">
+            <p class="section-label">Research &amp; discovery</p>
+            <h2>Make room for questions that move us forward.</h2>
+            <p>
+              Research at NEXORA will be shaped by its people and priorities.
+              Verified research areas, projects, and opportunities will be
+              shared here when official information is available.
+            </p>
+            <p class="legacy-notice">Research centers, grants, results, and faculty projects have not been verified for NEXORA.</p>
+            <a class="inline-link" href="/faculty-directory">Open faculty directory <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="campus" id="campus">
+        <div class="container campus-grid">
+          <div class="campus-image" role="img" aria-label="Illustrative library and campus architecture photograph"></div>
+          <div class="campus-copy">
+            <p class="section-label">Campus life</p>
+            <h2>A community takes shape in the moments between classes.</h2>
+            <p>
+              Campus life is more than a place. This space will introduce
+              NEXORA's verified facilities, student communities, and campus
+              experiences as they are confirmed.
+            </p>
+            <div class="campus-points">
+              <span>Student communities</span>
+              <span>Learning spaces</span>
+              <span>Campus facilities</span>
+              <span>Student experiences</span>
+            </div>
+            <p class="legacy-notice">Images are illustrative placeholders, not photographs of a confirmed NEXORA campus.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="faculty">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Faculty</p>
+              <h2>Meet the people behind the ideas.</h2>
+            </div>
+            <p>Faculty profiles will be published after an official NEXORA directory is connected.</p>
+          </div>
+          <div class="updates-empty">
+            <strong>Faculty directory coming soon</strong>
+            <span>No names, titles, or biographies are shown until verified NEXORA faculty information is available.</span>
+            <a class="inline-link" href="/faculty-directory">Open faculty directory <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="admissions-section" id="admissions">
+        <div class="container admissions-grid">
+          <div>
+            <p class="section-label">Admissions</p>
+            <h2>Your next chapter starts with a conversation.</h2>
+            <p>
+              Find official program requirements, application steps, dates, and
+              fees here once the NEXORA admissions guide is available.
+            </p>
+          </div>
+          <div class="admissions-card">
+            <strong>Admissions information</strong>
+            <p>Verified application details and admissions contacts are not yet connected to this website.</p>
+            <a class="button" href="/admissions">Open admissions page <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="programs" id="placements">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Placements &amp; careers</p>
+              <h2>Prepare for the work you want to do.</h2>
+            </div>
+            <p>Verified career services and placement information will appear here when an official NEXORA source is available.</p>
+          </div>
+          <div class="updates-empty">
+            <strong>Career information is being prepared</strong>
+            <span>No placement rates, employer names, or student outcomes are published without verified NEXORA records.</span>
+            <a class="inline-link" href="/placements">Open placements page <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="updates" id="news-events">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">The NEXORA journal</p>
+              <h2>News, ideas, and what’s happening.</h2>
+            </div>
+            <p>Follow official stories and upcoming events once a NEXORA newsroom and calendar are connected.</p>
+          </div>
+          <div class="updates-tabs" role="tablist" aria-label="News and events">
+            <button class="updates-tab" id="news-tab" type="button" role="tab" aria-selected="true" aria-controls="news-panel">News</button>
+            <button class="updates-tab" id="events-tab" type="button" role="tab" aria-selected="false" aria-controls="events-panel">Events</button>
+          </div>
+          <div class="updates-panel" id="news-panel" role="tabpanel" aria-labelledby="news-tab">
+            <div class="updates-empty">
+              <strong>No verified news stories yet</strong>
+              <span>NEXORA news will appear here when an official publication source is available.</span>
+            </div>
+          </div>
+          <div class="updates-panel" id="events-panel" role="tabpanel" aria-labelledby="events-tab" hidden>
+            <div class="updates-empty">
+              <strong>No upcoming events published</strong>
+              <span>Event titles, dates, and registration links will appear here after the official NEXORA calendar is connected.</span>
+              <a class="inline-link" href="/events">Open events page <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="student-hub" id="student-hub">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Student hub</p>
+              <h2>Your campus life, all in one place.</h2>
+            </div>
+            <p>Student tools are presented as entry points only; no sign-in, personal records, or official resource feeds are connected yet.</p>
+          </div>
+          <div class="hub-grid">
+            <article class="hub-card">
+              <span>01 · Student dashboard</span>
+              <h3>Your dashboard</h3>
+              <p>A personalized dashboard requires an approved NEXORA sign-in and student information system.</p>
+              <a href="/student-dashboard">Sign in to your dashboard <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="hub-card">
+              <span>02 · Notice board</span>
+              <h3>Notices</h3>
+              <p>Verified announcements will be listed here when an official notice feed is connected.</p>
+              <a href="/notices">Open notices <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="hub-card">
+              <span>03 · Study resources</span>
+              <h3>Learning resources</h3>
+              <p>Course materials and library access require approved NEXORA academic sources.</p>
+              <a href="/study-materials">Open study materials <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="hub-card">
+              <span>04 · Events hub</span>
+              <h3>Events hub</h3>
+              <p>Browse official event information when NEXORA's events calendar is available.</p>
+              <a href="/events">View events <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quickdesk" id="quickdesk" aria-labelledby="quickdesk-title">
+        <div class="container">
+          <div class="quickdesk-heading">
+            <div>
+              <p class="section-label">Reference directory</p>
+              <h2 id="quickdesk-title">Campus contacts, clearly sourced.</h2>
+            </div>
+            <p>Search the legacy directory below. It contains BMSIT&amp;M contacts, not verified NEXORA contacts.</p>
+          </div>
+          <div class="quickdesk-tools">
+            <label class="quickdesk-search-wrap">
+              <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="8.7" cy="8.7" r="5.7" stroke="currentColor" stroke-width="1.5" />
+                <path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <input class="quickdesk-search" id="quickdesk-search" type="search" maxlength="80" autocomplete="off" placeholder="Search legacy contacts or numbers" aria-label="Search legacy BMSIT&M contacts" />
+            </label>
+            <div class="quickdesk-filters" role="group" aria-label="Filter legacy contacts by category">
+              <button class="quickdesk-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="quickdesk-filter" type="button" data-filter="admissions" aria-pressed="false">Admissions</button>
+              <button class="quickdesk-filter" type="button" data-filter="office" aria-pressed="false">Office &amp; fees</button>
+              <button class="quickdesk-filter" type="button" data-filter="hostel" aria-pressed="false">Hostel</button>
+              <button class="quickdesk-filter" type="button" data-filter="safety" aria-pressed="false">Safety</button>
+            </div>
+          </div>
+          <p class="quickdesk-status" id="quickdesk-status" role="status" aria-live="polite"></p>
+          <div class="quickdesk-grid" id="quickdesk-results">
+            <article class="quickdesk-card" data-category="admissions">
+              <p class="quickdesk-category">BMSIT&amp;M · Admissions</p>
+              <h3>BMS Trust Office</h3>
+              <p class="quickdesk-detail">Listed for admissions on the BMSIT&amp;M contact page.</p>
+              <a class="quickdesk-action" href="tel:08026611636">Call 080-26611636 <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="quickdesk-card" data-category="admissions">
+              <p class="quickdesk-category">BMSIT&amp;M · Admissions</p>
+              <h3>Admissions Enquiry</h3>
+              <p class="quickdesk-detail">Numbers listed on the BMSIT&amp;M contact page.</p>
+              <a class="quickdesk-action" href="tel:08026146800">Call 080-26146800 <span aria-hidden="true">↗</span></a>
+              <a class="quickdesk-action" href="tel:08026146829">Call 080-26146829 <span aria-hidden="true">↗</span></a>
+              <a class="quickdesk-action" href="tel:08026146856">Call 080-26146856 <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="quickdesk-card" data-category="office">
+              <p class="quickdesk-category">BMSIT&amp;M · Office &amp; fees</p>
+              <h3>BMSIT Office / Fee Enquiry</h3>
+              <p class="quickdesk-detail">Listed on the BMSIT&amp;M contact page.</p>
+              <a class="quickdesk-action" href="tel:08026146829">Call 080-26146829 <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="quickdesk-card" data-category="hostel">
+              <p class="quickdesk-category">BMSIT&amp;M · Hostel</p>
+              <h3>Hostel Contact</h3>
+              <p class="quickdesk-detail">Number listed on the BMSIT&amp;M contact page.</p>
+              <a class="quickdesk-action" href="tel:+919741590336">Call 97415 90336 <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="quickdesk-card" data-category="safety">
+              <p class="quickdesk-category">BMSIT&amp;M · Safety</p>
+              <h3>Women Helpline</h3>
+              <p class="quickdesk-detail">The BMSIT&amp;M contact page lists a 24×7 helpline.</p>
+              <a class="quickdesk-action" href="tel:08026146852">Call 080-26146852 <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <p class="quickdesk-empty" id="quickdesk-empty" hidden>No matching legacy contacts. Try another search or category.</p>
+          <p class="quickdesk-source">
+            These public contacts belong to BMSIT&amp;M. They are not confirmed NEXORA contacts.
+            <a href="https://bmsit.ac.in/contact-details.php" target="_blank" rel="noopener noreferrer">Check the original BMSIT&amp;M contact page</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container cta-inner">
+          <div>
+            <h2>Discover where your curiosity can lead.</h2>
+            <p>Explore the NEXORA experience and return as new official information becomes available.</p>
+          </div>
+          <a class="button" href="/academics">Explore NEXORA <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-main">
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="#" aria-label="NEXORA Institute of Technology home">
+            <span class="brand-mark" aria-hidden="true">N</span>
+            <span><strong>NEXORA</strong><span>Institute of Technology</span></span>
+          </a>
+          <p class="footer-description">An editorial home for the NEXORA Institute of Technology community. Official institutional details will be added when verified sources are available.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Discover</h3>
+          <a href="#about">About NEXORA</a>
+          <a href="/academics">Academics</a>
+          <a href="#research">Research</a>
+          <a href="/faculty-directory">Faculty directory</a>
+        </div>
+        <div class="footer-column">
+          <h3>Community</h3>
+          <a href="#campus">Campus life</a>
+          <a href="/events">Events</a>
+          <a href="/placements">Placements</a>
+          <a href="/student-dashboard">Student dashboard</a>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <a href="/admissions">Admissions</a>
+          <a href="#quickdesk">Reference directory</a>
+          <a href="/assistant">College Assistant</a>
+          <a href="/study-materials">Study resources</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> NEXORA Institute of Technology</p>
+        <p>Campus imagery is illustrative. Student services and NEXORA information are pending official sources.</p>
+      </div>
+    </footer>
+
+    <button
+      class="assistant-launcher"
+      id="assistant-launcher"
+      type="button"
+      aria-expanded="false"
+      aria-controls="assistant-panel"
+    >
+      <span class="assistant-launcher-icon" aria-hidden="true">✦</span>
+      Ask NEXORA
+    </button>
+
+    <section
+      class="assistant-panel"
+      id="assistant-panel"
+      role="region"
+      aria-label="NEXORA College Assistant"
+      hidden
+    >
+      <header class="assistant-header">
+        <div class="assistant-heading">
+          <span class="assistant-avatar" aria-hidden="true">✦</span>
+          <span>
+            <strong>College Assistant</strong>
+            <span>NEXORA · source verification notice</span>
+          </span>
+        </div>
+        <div class="assistant-header-actions">
+          <button class="assistant-icon-button" id="assistant-reset" type="button" aria-label="Start a new conversation" title="New conversation">↻</button>
+          <button class="assistant-icon-button" id="assistant-close" type="button" aria-label="Close assistant">×</button>
+        </div>
+      </header>
+      <div class="assistant-notice">
+        Ask general questions only; don’t share private details. Available sources currently describe BMSIT&amp;M, not NEXORA, so answers about NEXORA need independently verified information.
+      </div>
+      <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+      <div class="assistant-suggestions" id="assistant-suggestions" aria-label="Suggested questions">
+        <button class="assistant-suggestion" type="button">Are these sources verified for NEXORA?</button>
+        <button class="assistant-suggestion" type="button">What is currently verified about NEXORA?</button>
+        <button class="assistant-suggestion" type="button">Where do the legacy contact details come from?</button>
+        <button class="assistant-suggestion" type="button">Do official sources list library hours?</button>
+      </div>
+      <form class="assistant-form" id="assistant-form">
+        <label class="sr-only" for="assistant-input">Ask a question about NEXORA</label>
+        <textarea
+          class="assistant-input"
+          id="assistant-input"
+          name="question"
+          rows="1"
+          maxlength="1000"
+          placeholder="Ask about NEXORA..."
+          required
+        ></textarea>
+        <button class="assistant-send" id="assistant-send" type="submit" aria-label="Send question">↑</button>
+      </form>
+      <p class="assistant-privacy">Questions are sent to the configured AI provider. This site does not store chats; provider data policies apply.</p>
+    </section>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector("#nav-links");
+      const discoverToggle = document.querySelector("#discover-toggle");
+      const discoverPanel = document.querySelector("#discover-panel");
+      const searchToggle = document.querySelector("#search-toggle");
+      const siteSearch = document.querySelector("#site-search");
+      const siteSearchInput = document.querySelector("#site-search-input");
+      const siteSearchResults = document.querySelector("#site-search-results");
+      const siteSearchStatus = document.querySelector("#site-search-status");
+      const newsTab = document.querySelector("#news-tab");
+      const eventsTab = document.querySelector("#events-tab");
+      const newsPanel = document.querySelector("#news-panel");
+      const eventsPanel = document.querySelector("#events-panel");
+      const quickdeskSearch = document.querySelector("#quickdesk-search");
+      const quickdeskCards = [...document.querySelectorAll(".quickdesk-card")];
+      const quickdeskFilters = [...document.querySelectorAll(".quickdesk-filter")];
+      const quickdeskStatus = document.querySelector("#quickdesk-status");
+      const quickdeskEmpty = document.querySelector("#quickdesk-empty");
+      let activeQuickdeskFilter = "all";
+      const assistantLauncher = document.querySelector("#assistant-launcher");
+      const assistantPanel = document.querySelector("#assistant-panel");
+      const assistantClose = document.querySelector("#assistant-close");
+      const assistantReset = document.querySelector("#assistant-reset");
+      const assistantForm = document.querySelector("#assistant-form");
+      const assistantInput = document.querySelector("#assistant-input");
+      const assistantSend = document.querySelector("#assistant-send");
+      const assistantMessages = document.querySelector("#assistant-messages");
+      const assistantSuggestions = document.querySelector("#assistant-suggestions");
+      const assistantHistory = [];
+      const assistantMaxHistory = 8;
+      let assistantBusy = false;
+      let assistantCsrfToken = null;
+
+      function addAssistantMessage(text, role, sources = []) {
+        const message = document.createElement("article");
+        message.className = `assistant-message assistant-message-${role}`;
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        message.append(paragraph);
+
+        if (sources.length) {
+          const sourceList = document.createElement("div");
+          sourceList.className = "assistant-sources";
+          sourceList.setAttribute("aria-label", "Answer sources");
+
+          sources.forEach((source) => {
+            if (
+              !source ||
+              typeof source.title !== "string" ||
+              typeof source.url !== "string"
+            ) {
+              return;
+            }
+
+            try {
+              const url = new URL(source.url);
+              if (url.protocol !== "https:" || url.hostname !== "bmsit.ac.in") {
+                return;
+              }
+
+              const link = document.createElement("a");
+              link.href = url.href;
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+              link.textContent = source.title;
+              sourceList.append(link);
+            } catch {
+              return;
+            }
+          });
+
+          if (sourceList.childElementCount) {
+            message.append(sourceList);
+          }
+        }
+
+        assistantMessages.append(message);
+        assistantMessages.scrollTop = assistantMessages.scrollHeight;
+        return message;
+      }
+
+      function resetAssistant() {
+        assistantHistory.length = 0;
+        assistantMessages.replaceChildren();
+        addAssistantMessage(
+          "Hi, I’m the NEXORA College Assistant. The available official sources currently describe BMSIT&M, not NEXORA, so I can’t present those details as verified NEXORA information. Ask a question and I’ll be clear about what the sources do and don’t confirm.",
+          "bot",
+        );
+      }
+
+      function setAssistantBusy(isBusy) {
+        assistantBusy = isBusy;
+        assistantSend.disabled = isBusy;
+        assistantInput.disabled = isBusy;
+        assistantSuggestions.querySelectorAll("button").forEach((button) => {
+          button.disabled = isBusy;
+        });
+        assistantSend.setAttribute("aria-label", isBusy ? "Sending question" : "Send question");
+      }
+
+      function setAssistantOpen(isOpen) {
+        assistantPanel.hidden = !isOpen;
+        assistantLauncher.setAttribute("aria-expanded", String(isOpen));
+        assistantLauncher.setAttribute("aria-label", isOpen ? "Close NEXORA assistant" : "Open NEXORA assistant");
+        if (isOpen) {
+          assistantInput.focus();
+        } else {
+          assistantLauncher.focus();
+        }
+      }
+
+      async function sendAssistantQuestion(question) {
+        const cleanedQuestion = question.trim();
+        if (assistantBusy || !cleanedQuestion || cleanedQuestion.length > 1000) {
+          if (cleanedQuestion.length > 1000) {
+            addAssistantMessage("Please keep your question under 1,000 characters.", "bot");
+          }
+          return;
+        }
+
+        if (!assistantCsrfToken) {
+          try {
+            const sessionResponse = await fetch("/api/me", { credentials: "same-origin" });
+            const session = await sessionResponse.json();
+            if (!session.authenticated) {
+              addAssistantMessage(
+                "Please sign in to use the College Assistant. The assistant page has the same secure sign-in requirement.",
+                "bot",
+                [{ title: "Sign in to NEXORA", url: "/login" }],
+              );
+              return;
+            }
+            assistantCsrfToken = session.csrf_token;
+          } catch {
+            addAssistantMessage("I can’t check your sign-in session. Please reload the page and try again.", "bot");
+            return;
+          }
+        }
+
+        addAssistantMessage(cleanedQuestion, "user");
+        assistantHistory.push({ role: "user", content: cleanedQuestion });
+        assistantInput.value = "";
+        setAssistantBusy(true);
+
+        const typing = document.createElement("div");
+        typing.className = "assistant-message assistant-message-bot assistant-typing";
+        typing.setAttribute("role", "status");
+        typing.setAttribute("aria-label", "Assistant is checking official information");
+        for (let dot = 0; dot < 3; dot += 1) {
+          typing.append(document.createElement("span"));
+        }
+        assistantMessages.append(typing);
+        assistantMessages.scrollTop = assistantMessages.scrollHeight;
+
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 45000);
+
+        try {
+          const response = await fetch("/api/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": assistantCsrfToken,
+            },
+            body: JSON.stringify({ messages: assistantHistory.slice(-assistantMaxHistory) }),
+            signal: controller.signal,
+          });
+          const result = await response.json().catch(() => null);
+
+          if (!response.ok) {
+            throw new Error(
+              typeof result?.error === "string"
+                ? result.error
+                : "The assistant is unavailable right now. Please try again.",
+            );
+          }
+
+          if (
+            !result ||
+            typeof result.answer !== "string" ||
+            !Array.isArray(result.sources)
+          ) {
+            throw new Error("The assistant returned an unexpected response. Please try again.");
+          }
+
+          assistantHistory.push({ role: "assistant", content: result.answer });
+          assistantHistory.splice(0, Math.max(0, assistantHistory.length - assistantMaxHistory));
+          addAssistantMessage(result.answer, "bot", result.sources);
+        } catch (error) {
+          const message =
+            error.name === "AbortError"
+              ? "That took too long. Please try again, or contact the college directly."
+              : error.message === "Failed to fetch"
+                ? "I can’t reach the assistant service. Start the website server and try again."
+                : error.message;
+          addAssistantMessage(message, "bot", [
+            {
+              title: "Official contact details",
+              url: "https://bmsit.ac.in/contact-details.php",
+            },
+          ]);
+        } finally {
+          window.clearTimeout(timeout);
+          typing.remove();
+          setAssistantBusy(false);
+          assistantInput.focus();
+        }
+      }
+
+      resetAssistant();
+
+      assistantLauncher.addEventListener("click", () => {
+        setAssistantOpen(assistantPanel.hidden);
+      });
+
+      assistantClose.addEventListener("click", () => setAssistantOpen(false));
+      assistantReset.addEventListener("click", resetAssistant);
+
+      document.querySelectorAll("[data-assistant-open]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          setAssistantOpen(true);
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !assistantPanel.hidden) {
+          setAssistantOpen(false);
+        }
+      });
+
+      assistantForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!assistantInput.reportValidity()) {
+          return;
+        }
+        sendAssistantQuestion(assistantInput.value);
+      });
+
+      assistantInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          assistantForm.requestSubmit();
+        }
+      });
+
+      assistantSuggestions.addEventListener("click", (event) => {
+        const suggestion = event.target.closest("button");
+        if (suggestion && !assistantBusy) {
+          sendAssistantQuestion(suggestion.textContent);
+        }
+      });
+
+      function setDiscoverOpen(isOpen) {
+        discoverToggle.setAttribute("aria-expanded", String(isOpen));
+        discoverPanel.classList.toggle("is-open", isOpen);
+      }
+
+      discoverToggle.addEventListener("click", () => {
+        setDiscoverOpen(discoverToggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      function setSearchOpen(isOpen) {
+        siteSearch.hidden = !isOpen;
+        searchToggle.setAttribute("aria-expanded", String(isOpen));
+        searchToggle.setAttribute("aria-label", isOpen ? "Close site search" : "Open site search");
+        if (isOpen) {
+          setDiscoverOpen(false);
+          siteSearchInput.focus();
+        } else {
+          siteSearchResults.replaceChildren();
+        }
+      }
+
+      searchToggle.addEventListener("click", () => {
+        setSearchOpen(siteSearch.hidden);
+      });
+
+      function updateSiteSearch() {
+        const query = siteSearchInput.value.trim().toLocaleLowerCase();
+        siteSearchResults.replaceChildren();
+
+        if (!query) {
+          siteSearchStatus.textContent = "Type a search term to find page sections.";
+          return;
+        }
+
+        const matches = [...document.querySelectorAll("main section[id]")].filter((section) =>
+          section.textContent.toLocaleLowerCase().includes(query),
+        );
+        const dedicatedPages = {
+          academics: "/academics",
+          admissions: "/admissions",
+          faculty: "/faculty-directory",
+          placements: "/placements",
+          "news-events": "/events",
+          "student-hub": "/student-dashboard",
+        };
+
+        matches.slice(0, 8).forEach((section) => {
+          const heading = section.querySelector("h1, h2");
+          const link = document.createElement("a");
+          link.href = dedicatedPages[section.id] || `#${section.id}`;
+          link.textContent = heading?.textContent.trim() || section.id;
+          siteSearchResults.append(link);
+        });
+
+        siteSearchStatus.textContent = matches.length
+          ? `${matches.length} ${matches.length === 1 ? "section" : "sections"} found.`
+          : "No matching sections. Try another search.";
+      }
+
+      siteSearch.addEventListener("submit", (event) => {
+        event.preventDefault();
+        updateSiteSearch();
+      });
+      siteSearchInput.addEventListener("input", updateSiteSearch);
+
+      function setUpdatesTab(tab) {
+        const showNews = tab === "news";
+        newsTab.setAttribute("aria-selected", String(showNews));
+        eventsTab.setAttribute("aria-selected", String(!showNews));
+        newsPanel.hidden = !showNews;
+        eventsPanel.hidden = showNews;
+      }
+
+      newsTab.addEventListener("click", () => setUpdatesTab("news"));
+      eventsTab.addEventListener("click", () => setUpdatesTab("events"));
+      document.querySelectorAll("[data-select-tab='events']").forEach((link) => {
+        link.addEventListener("click", () => setUpdatesTab("events"));
+      });
+
+      document.querySelector('[role="tablist"]').addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) {
+          return;
+        }
+        event.preventDefault();
+        const target = event.key === "Home" || event.key === "ArrowLeft" ? newsTab : eventsTab;
+        setUpdatesTab(target === newsTab ? "news" : "events");
+        target.focus();
+      });
+
+      function updateQuickdesk() {
+        const query = quickdeskSearch.value.trim().toLocaleLowerCase();
+        let visibleCount = 0;
+
+        quickdeskCards.forEach((card) => {
+          const matchesQuery = card.textContent.toLocaleLowerCase().includes(query);
+          const matchesCategory =
+            activeQuickdeskFilter === "all" || card.dataset.category === activeQuickdeskFilter;
+          const isVisible = matchesQuery && matchesCategory;
+
+          card.hidden = !isVisible;
+          visibleCount += Number(isVisible);
+        });
+
+        quickdeskEmpty.hidden = visibleCount > 0;
+        quickdeskStatus.textContent = `${visibleCount} ${visibleCount === 1 ? "contact" : "contacts"} found.`;
+      }
+
+      quickdeskSearch.addEventListener("input", updateQuickdesk);
+
+      quickdeskFilters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+          activeQuickdeskFilter = filter.dataset.filter;
+          quickdeskFilters.forEach((button) => {
+            button.setAttribute("aria-pressed", String(button === filter));
+          });
+          updateQuickdesk();
+        });
+      });
+
+      updateQuickdesk();
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+        navLinks.classList.toggle("is-open", !isOpen);
+      });
+
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          navLinks.classList.remove("is-open");
+          setDiscoverOpen(false);
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".nav-dropdown")) {
+          setDiscoverOpen(false);
+        }
+        if (!event.target.closest("#site-search") && !event.target.closest("#search-toggle")) {
+          setSearchOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setDiscoverOpen(false);
+          if (!siteSearch.hidden) {
+            setSearchOpen(false);
+          }
+          if (navLinks.classList.contains("is-open")) {
+            navLinks.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+          }
+        }
+      });
+
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
